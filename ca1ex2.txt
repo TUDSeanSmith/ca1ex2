@@ -1,0 +1,21 @@
+git init
+git branch -m master main
+git add .
+git commit -m "initial commit"
+git switch -c feature-local-test
+git add cloud.py
+git commit -m "commit initial edit of cloud.py"
+git branch main
+git switch main
+git add cloud.py
+git commit -m "commit another edit of cloud.py"
+git merge feature-local-test
+git add cloud.py
+git remote add origin https://github.com/TUDSeanSmith/ca1ex2.git
+git push -u origin main
+git pull origin main
+git pull
+git status
+git commit -m "last edit of cloud.py"
+git push -u origin main
+git pull
